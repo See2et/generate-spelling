@@ -1,4 +1,4 @@
 {
-  "vowels": [],
-  "conses": []
+  "vowels": ["a", "e", "i", "o", "u"],
+  "conses": ["p", "t", "k", "s", "m", "n", "l"]
 }
