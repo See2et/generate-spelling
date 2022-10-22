@@ -1,5 +1,4 @@
 export function carryUp(value: number, radixes: number[]) {
-  if (!Array.isArray(radixes)) throw new TypeError("radixes must be an array");
   if (value >= radixes.reduce((a, b) => a * b))
     throw new TypeError("this value is too large");
   const digits = radixes
