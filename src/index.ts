@@ -1,1 +1,1 @@
-console.log("it is template for creating new tsnode projects.");
+import config from "../data/config.json";
