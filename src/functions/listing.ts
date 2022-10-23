@@ -7,7 +7,7 @@ export function listing(from: number, to: number, syllable: string[][]) {
   const indexOfMaxRadix = radixes.indexOf(maxRadix);
   const removedMaxRadix = radixes.slice(indexOfMaxRadix + 1);
 
-  const spellingNum = [...new Array(Math.abs(to - from))].map((_, i) => {
+  const spellingNum = [...new Array(to)].map((_, i) => {
     const carriedUp = carryUp(i + from, removedMaxRadix);
     const spliced = carriedUp.splice(indexOfMaxRadix, 0, (i + from) % maxRadix);
     return carriedUp;
