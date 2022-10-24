@@ -1,9 +1,8 @@
 import { carryUp } from "./carryUp";
-import { numArrayToString } from "./numArrayToString";
 
 export function spell(value: number, syllable: string[][]) {
-  const radixes = syllable.map((value) => value.length);
+  const radixes = syllable.map((v) => v.length);
   const digits = carryUp(value, radixes);
-  const result = numArrayToString(digits, syllable);
+  const result = digits.map((v, i) => syllable[i][v]).join("");
   return result;
 }
