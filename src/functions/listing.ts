@@ -8,7 +8,7 @@ export function listing(from: number, to: number, syllable: string[][]) {
     .slice(0, indexOfMaxRadix)
     .concat(radixes.slice(indexOfMaxRadix + 1, radixes.length));
 
-  const spelling = [...new Array(to - from)].map((_, i) => {
+  const spelling = [...new Array(Math.abs(to - from))].map((_, i) => {
     const carriedUp = carryUp(i + from, removedMaxRadix);
     carriedUp.splice(indexOfMaxRadix, 0, (i + from) % maxRadix);
     return carriedUp.map((v, i) => syllable[i][v]).join("");
