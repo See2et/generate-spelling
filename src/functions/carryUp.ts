@@ -3,13 +3,13 @@ export function carryUp(value: number, radixes: number[]) {
     throw new TypeError("this value is too large");
   const digits = radixes
     .slice(0)
-    .reverse()
+    //.reverse()
     .map((radix) => {
       const digit = value % radix;
       value -= digit;
       value /= radix;
       return digit;
-    })
-    .reverse();
+    });
+  //.reverse();
   return digits;
 }
