@@ -1,5 +1,5 @@
 export function makeZpdicJson(words: string[]) {
-  [...new Array(words.length)].map((value, index) => {
+  return words.map((value, index) => {
     return {
       entry: {
         id: index,
